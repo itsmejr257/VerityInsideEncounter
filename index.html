@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verity Inside</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>Verity Inside</h1>
+<div class="input-group" style="text-align: center;">
+    <label><h3>Enter Order:</h3></label>
+    <div style="text-align: center; margin-bottom: 10px;">
+        <button class="reset-button" onclick="resetSelections()">Reset</button>
+    </div>
+    <div class="toggle-buttons">
+        <!-- Left Section -->
+        <div class="section left">
+            <h4>Left</h4>
+            <div class="button-row">
+                <div class="toggle-button" data-index="0" data-value="T" onclick="selectOrder(this, 'T')">
+                    <div class="shape triangle"></div>
+                    <span>Triangle</span>
+                </div>
+                <div class="toggle-button" data-index="0" data-value="C" onclick="selectOrder(this, 'C')">
+                    <div class="shape circle"></div>
+                    <span>Circle</span>
+                </div>
+                <div class="toggle-button" data-index="0" data-value="S" onclick="selectOrder(this, 'S')">
+                    <div class="shape square"></div>
+                    <span>Square</span>
+                </div>
+            </div>
+        </div>
+        <!-- Middle Section -->
+        <div class="section middle">
+            <h4>Middle</h4>
+            <div class="button-row">
+                <div class="toggle-button" data-index="1" data-value="T" onclick="selectOrder(this, 'T')">
+                    <div class="shape triangle"></div>
+                    <span>Triangle</span>
+                </div>
+                <div class="toggle-button" data-index="1" data-value="C" onclick="selectOrder(this, 'C')">
+                    <div class="shape circle"></div>
+                    <span>Circle</span>
+                </div>
+                <div class="toggle-button" data-index="1" data-value="S" onclick="selectOrder(this, 'S')">
+                    <div class="shape square"></div>
+                    <span>Square</span>
+                </div>
+            </div>
+        </div>
+        <!-- Right Section -->
+        <div class="section right">
+            <h4>Right</h4>
+            <div class="button-row">
+                <div class="toggle-button" data-index="2" data-value="T" onclick="selectOrder(this, 'T')">
+                    <div class="shape triangle"></div>
+                    <span>Triangle</span>
+                </div>
+                <div class="toggle-button" data-index="2" data-value="C" onclick="selectOrder(this, 'C')">
+                    <div class="shape circle"></div>
+                    <span>Circle</span>
+                </div>
+                <div class="toggle-button" data-index="2" data-value="S" onclick="selectOrder(this, 'S')">
+                    <div class="shape square"></div>
+                    <span>Square</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="input-group" id="holdingInputs">
+    <div class ="toggle-buttons">
+        <div class="section left">
+            <h4><label><span id="shape1"></span> Holding:</label></h4>
+            <div class="button-row">
+                <div class="toggle-holding-button" holding-index="0" data-index="0" data-value="T" onclick="selectHolding(this, 'T')">
+                    <div class="shape triangle"></div>
+                    <span>Triangle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index="0" data-index="1" data-value="C" onclick="selectHolding(this, 'C')">
+                    <div class="shape circle"></div>
+                    <span>Circle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index="0" data-index="2" data-value="S" onclick="selectHolding(this, 'S')">
+                    <div class="shape square"></div>
+                    <span>Square</span>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <div class="toggle-holding-button" holding-index="0" data-index="3" data-value="T" onclick="selectHolding(this, 'T')">
+                    <div class="shape triangle"></div>
+                    <span>Triangle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index="0" data-index="4" data-value="C" onclick="selectHolding(this, 'C')">
+                    <div class="shape circle"></div>
+                    <span>Circle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index="0" data-index="5" data-value="S" onclick="selectHolding(this, 'S')">
+                    <div class="shape square"></div>
+                    <span>Square</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section middle">
+            <h4><label><span id="shape2"></span> Holding:</label></h4>
+            <div class="button-row">
+                <div class="toggle-holding-button" holding-index="1" data-index="0" data-value="T" onclick="selectHolding(this, 'T')">
+                    <div class="shape triangle"></div>
+                    <span>Triangle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index="1" data-index="1" data-value="C" onclick="selectHolding(this, 'C')">
+                    <div class="shape circle"></div>
+                    <span>Circle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index="1" data-index="2" data-value="S" onclick="selectHolding(this, 'S')">
+                    <div class="shape square"></div>
+                    <span>Square</span>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <div class="toggle-holding-button" holding-index="1" data-index="3" data-value="T" onclick="selectHolding(this, 'T')">
+                    <div class="shape triangle"></div>
+                    <span>Triangle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index="1" data-index="4" data-value="C" onclick="selectHolding(this, 'C')">
+                    <div class="shape circle"></div>
+                    <span>Circle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index="1" data-index="5" data-value="S" onclick="selectHolding(this, 'S')">
+                    <div class="shape square"></div>
+                    <span>Square</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section right">
+            <h4><label><span id="shape3"></span> Holding:</label></h4>
+            <div class="button-row">
+                <div class="toggle-holding-button" holding-index= "2" data-index="0" data-value="T" onclick="selectHolding(this, 'T')">
+                    <div class="shape triangle"></div>
+                    <span>Triangle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index= "2" data-index="1" data-value="C" onclick="selectHolding(this, 'C')">
+                    <div class="shape circle"></div>
+                    <span>Circle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index= "2" data-index="2" data-value="S" onclick="selectHolding(this, 'S')">
+                    <div class="shape square"></div>
+                    <span>Square</span>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <div class="toggle-holding-button" holding-index="2" data-index="3" data-value="T" onclick="selectHolding(this, 'T')">
+                    <div class="shape triangle"></div>
+                    <span>Triangle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index="2" data-index="4" data-value="C" onclick="selectHolding(this, 'C')">
+                    <div class="shape circle"></div>
+                    <span>Circle</span>
+                </div>
+                <div class="toggle-holding-button" holding-index="2" data-index="5" data-value="S" onclick="selectHolding(this, 'S')">
+                    <div class="shape square"></div>
+                    <span>Square</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="result" id="result"></div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
