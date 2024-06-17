@@ -18,13 +18,12 @@ function shapeElement(shape) {
 function selectOrder(element, value) {
     const index = element.getAttribute('data-index');
 
-    // If the shape is already selected in another section, do nothing
     if (order.includes(value) && order[index] !== value) {
         return;
     }
 
     if (order[index] === value) {
-        order[index] = ""; // Untoggle if already selected
+        order[index] = "";
     } else {
         order[index] = value; // Toggle the shape
     }

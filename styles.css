@@ -92,7 +92,7 @@ input, .toggle-buttons {
 .toggle-buttons {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align sections at the top */
+    align-items: flex-start;
     padding: 10px;
     background-color: #f9f9f9;
 }
@@ -101,11 +101,11 @@ input, .toggle-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 20px; /* Spacing between sections */
+    margin: 0 20px;
 }
 
 .section .button-row {
-    display: flex; /* This will make the buttons line up horizontally */
+    display: flex;
     justify-content: center;
 }
 
@@ -165,12 +165,12 @@ input, .toggle-buttons {
 
 .steps-container {
     display: flex;
-    justify-content: space-around; /* Distribute space evenly */
-    align-items: flex-start; /* Align items at the top of the container */
-    flex-wrap: wrap; /* Wrap items to next line if space is not enough */
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 .player-steps {
-    flex: 1 1 30%; /* Each step block takes up roughly one third of the space */
-    margin: 10px; /* Space between blocks */
+    flex: 1 1 30%;
+    margin: 10px;
     box-sizing: border-box;
 }
